@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/component.css')
+    link(rel='stylesheet', href='/css/animate.min.css')
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/javascripts/startscripts.js')
+  body
+   
+    section.wow.slideInLeft.animated(style='visibility: visible; animation-name: slideInLeft;')
+      table
+        tbody
+          tr
+            td.spearfill  
+            td
+              img(src='images/topspearshadow.png')
+    .container(id='headerContainer')
+        header(style='text-align:left; padding: 0; padding-bottom: 10px;')
+            img(src='images/logonew.png')
+            #divSearch(style='float:right;')
+              #divSearchButtons(style='padding-bottom: 5px; text-align:right;')
+                a(href='https://www.facebook.com/tampanoles', target='_blank')
+                  img(src='images/02_facebook_circle.png', width='40')
+                a(href='https://twitter.com/tampanoles', target='_blank')
+                  img(src='images/01_twitter_circle.png', width='40')
+                a(href='http://www.linkedin.com/groups/Tampa-Bay-Seminole-Club-140859/about', target='_blank')
+                  img(src='images/07_linkedin_circle.png', width='40')
+                a(href='https://instagram.com/tampanoles/', target='_blank')
+                  img(src='images/10_instagram_circle.png', width='40')
+              input#txtSearch.form-control(type='text', placeholder='Search', style='width: 250px')
+        #menuContainer
+          section#menuMoble(style='text-align: right; padding: 5px 15px 10px 5px;')
+            a(style='cursor: pointer;', onclick="$('#menu').slideToggle('slow');")
+               span.glyphicon.glyphicon-align-justify(style='color: #540115; font-size: xx-large;')
+          section#menu
+            nav.cl-effect-17#cl-effect-17
+              a(href='/', data-hover='Home') Home
+              a(href='/leadership', data-hover='Leadership') Leadership
+              a(href='events.aspx', data-hover='Events') Events
+              a(href='/games', data-hover='Game Watching') Game Watching
+              div(style='display: inline; position: relative;')
+                a#aAwards(data-hover='Awards') Awards
+                #divAwards(style='left: 0px; border: 1px solid rgb(216, 205, 159); background: rgb(84, 1, 21); position: absolute; width: 250px; z-index: 9999999; display: none')
+                  a(href='games.aspx' style='color: #d8cd9f') Alumni of the Month
+                  a(href='games.aspx' style='color: #d8cd9f') SCHOLARSHIPS
+              a(href='games.aspx', data-hover='Membership') Membership
+              a(href='games.aspx', data-hover='Contact') Contact
+
+    #container
+      if home == true
+            include carousel
+      else
+            
+      
+      .container-fluid
+        .row
+          .col-md-8
+             block content
+          .col-md-4
+            include social
+    .container-fluid#footer
+      include footer
+    script(src='/javascripts/wow.min.js')
+    script(src='/javascripts/jquery.sticky.js') 
+    script(src='/javascripts/endscripts.js')

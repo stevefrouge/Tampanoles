@@ -1,0 +1,20 @@
+#social
+    .row
+        div(style='font-size: x-large; color: #540115; min-width: 180px; width: 324px; border: 1px solid #540115; margin-top: 10px; padding: 5px;')
+            img(src='images/fsu-lg.png', width='45')
+            |  Kick Off In 
+            span(id='spnDays') 0 
+            |  days
+    .row 
+        .emailist(style='width:324px')
+            include emaillist
+    .row
+        .fb-page(data-href='https://www.facebook.com/tampanoles/', width='325', data-tabs='timeline', data-small-header='true', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+        blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/tampanoles/')
+    .row
+        .twitter(style='width:323px')
+            a.twitter-timeline(href='https://twitter.com/tampanoles', data-widget-id='489165312370020352') Tweets by @tampanoles      
+            script.
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+                
